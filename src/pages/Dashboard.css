@@ -1,0 +1,191 @@
+/* Fullscreen layout */
+
+.dashboard-container {
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-wrapper {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Default to column for smaller screens */
+    align-items: center;
+}
+
+
+/* Title styling */
+
+.dashboard-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    /* Default size */
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.dashboard-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    /* Default size */
+    color: #34495e;
+    margin-bottom: 40px;
+}
+
+
+/* Card styling */
+
+.card {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    /* Maximum width for cards */
+    margin-bottom: 20px;
+    /* Space between cards */
+}
+
+.eco-card {
+    background: linear-gradient(to right, #96e6a1, #d4fc79);
+    color: #2c3e50;
+}
+
+.habits-card {
+    background: linear-gradient(to right, #fcb69f, #ffecd2);
+    color: #2c3e50;
+}
+
+
+/* Habit list styling */
+
+.habit-list {
+    list-style-type: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove padding */
+}
+
+.habit-list li {
+    font-size: 1rem;
+    /* Default size */
+    padding: 5px 0;
+    /* Space between list items */
+    color: #2c3e50;
+    /* Text color */
+    font-family: 'Roboto', sans-serif;
+    /* Font family */
+}
+
+
+/* Button styling */
+
+.view-habits-btn {
+    padding: 10px 20px;
+    /* Default padding */
+    font-size: 1rem;
+    /* Default size */
+    border-radius: 30px;
+    /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    /* Font family */
+    font-weight: bold;
+    /* Bold text */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.view-habits-btn:hover {
+    background-color: #27ae60;
+    /* Button hover color */
+    color: #ffffff;
+    /* Text color on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow effect on hover */
+}
+
+
+/* Responsive Design */
+
+@media (min-width: 1200px) {
+    .content-wrapper {
+        flex-direction: row;
+        /* Change to row for larger screens */
+        justify-content: space-between;
+        /* Space out cards evenly */
+        align-items: flex-start;
+        /* Align items at the start */
+        padding-top: 40px;
+        /* Add top padding for larger screens */
+    }
+    .dashboard-title {
+        font-size: 4rem;
+        /* Larger title for better visibility */
+    }
+    .dashboard-subtitle {
+        font-size: 1.5rem;
+        /* Slightly larger subtitle */
+    }
+    .card {
+        max-width: calc(50% - 20px);
+        /* Two cards per row with spacing */
+        margin-bottom: 20px;
+        /* Space between rows of cards */
+    }
+    .view-habits-btn {
+        padding: 15px 30px;
+        /* Larger padding for better touch targets */
+        font-size: 1.2rem;
+        /* Increase font size for readability */
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-title {
+        font-size: 2.5rem;
+        /* Adjusted for medium screens */
+    }
+    .dashboard-subtitle {
+        font-size: 1.1rem;
+        /* Adjusted for medium screens */
+    }
+    .view-habits-btn {
+        font-size: 0.9rem;
+        /* Adjusted for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 2rem;
+        /* Adjusted for small screens */
+    }
+    .dashboard-subtitle {
+        font-size: 1rem;
+        /* Adjusted for small screens */
+    }
+    .view-habits-btn {
+        font-size: 0.9rem;
+        /* Adjusted for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-title {
+        font-size: 1.5rem;
+        /* Adjusted for extra small screens */
+    }
+    .dashboard-subtitle {
+        font-size: 0.9rem;
+        /* Adjusted for extra small screens */
+    }
+    .habit-list li {
+        font-size: 0.9rem;
+        /* Adjusted list item size for extra small screens */
+    }
+}
